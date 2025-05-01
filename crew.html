@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -10,19 +11,21 @@
   <link rel="stylesheet" href="index.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  <title>Space Tourism Website</title>
+  <title>Crew</title>
 </head>
-<body class="home">
+
+<body class="crew">
   <a href="#main" class="skip-to-content">Skip to main content</a>
   <header class="primary-header flex">
     <div>
       <img src="./assets/shared/logo.svg" alt="space tourism logo" class="logo"></img>
     </div>
     <div class="nav">
-      <button class="mobile-nav-toggle" aria-controls="primary-navigation" ><span class="sr-only" aria-expanded="false">Menu</span></button>
+      <button class="mobile-nav-toggle" aria-controls="primary-navigation"><span class="sr-only"
+          aria-expanded="false">Menu</span></button>
       <nav>
         <ul id="primary-navigation" data-visible="false" class="primary-navigation underline-indicators flex">
-          <li class="active">
+          <li>
             <a class="ff-sans-cond uppercase text-white letter-spacing-2" href="index.html">
               <span aria-hidden="true">00</span>Home
             </a>
@@ -32,33 +35,46 @@
               <span aria-hidden="true">01</span>Destination
             </a>
           </li>
-          <li>
+          <li class="active">
             <a class="ff-sans-cond uppercase text-white letter-spacing-2" href="crew.html">
               <span aria-hidden="true">02</span>Crew
             </a>
           </li>
-          <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="technology.html"><span>03</span>Technology</a></li>
+          <li>
+            <a class="ff-sans-cond uppercase text-white letter-spacing-2"
+              href="technology.html"><span>03</span>Technology
+            </a>
+          </li>
         </ul>
       </nav>
     </div>
   </header>
-  
-  <main id="main" class="grid-container grid-container--home">
-    <div>
-      <h1 class="text-accent fs-500 uppercase .ff-sans-cond letter-spacing-1">So, you want to travel to
-      <span class="fs-900 ff-serif text-white d-block">Space</span></h1>  
-      <p>Let’s face it; if you want to go to space, you might as well genuinely go to 
-        outer space and not hover kind of on the edge of it. Well sit back, and relax 
-        because we’ll give you a truly out of this world experience!</p>    
+
+  <main id="main" class="grid-container grid-container--crew">
+    <h1 class="numbered-title"><span aria-hidden="true">02</span>Meet your crew</h1>
+    <article class="crew-info">
+      <h2 class="fs-600 uppercase .ff-serif">Commander</h2>
+      <p class="fs-700 uppercase .ff-serif">Douglas Hurley</p>
+      <p>
+        Douglas Gerald Hurley is an American engineer, former Marine Corps pilot
+        and former NASA astronaut. He launched into space for the third time as
+        commander of Crew Dragon Demo-2.
+      </p>
+    </article>
+    <div class="dot-indicators flex">
+      <button aria-selected="true" class=""><span class="sr-only">The commander.</span></button>
+      <button aria-selected="false" class=""><span class="sr-only">The Missions Specialist.</span></button>
+      <button aria-selected="false" class=""><span class="sr-only">The Pilot.</span></button>
+      <button aria-selected="false" class=""><span class="sr-only">The Crew Engineer.</span></button>
     </div>
-    <div>
-      <a href="#" class="large-button text-dark ff-serif bg-white uppercase">Explore</a>
-    </div>
+    <picture>
+      <source srcset="assets/crew/image-douglas-hurley.webp" type="image/webp">
+      <img src="assets/crew/image-douglas-hurley.png" alt="Commander Douglas Hurley."></img>
+    </picture>
   </main>
-
-
 
   <script src="index.js"></script>
 
 </body>
+
 </html>
