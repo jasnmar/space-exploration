@@ -96,7 +96,7 @@ body {
 img,
 picture {
   max-width: 100%;
-  display: block;
+  /* display: block; */
 }
 
 input,
@@ -151,7 +151,6 @@ select {
   margin-inline: auto;
 }
 
-
 .sr-only {
   position: absolute;
   width: 1px;
@@ -181,7 +180,7 @@ select {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 /* --------------- */
@@ -578,7 +577,6 @@ body {
 
 /* Crew */
 
-
 .grid-container--crew {
   grid-template-areas:
     'title'
@@ -609,14 +607,75 @@ body {
   margin-bottom: 2rem;
 }
 
+/* Technology */
+
+.grid-container--tech {
+  grid-template-areas:
+  'title'
+  'image'
+  'controls'
+  'content'
+}
+
+.grid-container--tech > .numbered-title {
+  margin-block: 2rem 4rem;
+  grid-area: title;
+}
+
+.grid-container--tech > img {
+  grid-area: image;
+}
+
+.grid-container--tech > .number-indicators {
+  margin-block: 2rem 3rem;
+  grid-area: controls;
+}
+
+.grid-container--tech > .tech-info {
+  grid-area: content;
+}
+
+.grid-container--tech > .tech-info > * {
+  margin-bottom: 1rem;
+}
+
+.hero-images {
+  display: block;
+}
+
+.hero-images-wide {
+  display: none;
+}
+
+
+.tech-info > h2 {
+  color:hsl(var(--clr-white) / .5);
+}
+
 @media (min-width: 35em) {
   .numbered-title {
     justify-self: start;
     margin-top: 2rem;
   }
+
   .destination-meta {
     flex-direction: row;
     justify-content: space-evenly;
+  }
+  
+  .hero-images {
+    display: none;
+  }
+
+  .hero-images-wide {
+    display: block;
+  }
+
+  .grid-container * {
+    max-width: 100%;
+  }
+  .grid-container--tech > .number-indicators {
+    margin-block: 1rem 2rem;
   }
 }
 
@@ -679,5 +738,49 @@ body {
   }
   .grid-container--crew > .crew-info{
     min-height: 21rem;
+  }
+
+  .grid-container--tech {
+    grid-template-areas:
+    '. title title title .'
+    '. controls content image .';
+    grid-template-columns: 
+      minmax(1rem, 1fr) 
+      minmax(0, 4rem) 
+      minmax(0, 30rem) 
+      minmax(0, 36rem) 
+      minmax(1rem, 1fr);
+  }
+
+  .grid-container--tech > .numbered-title {
+    grid-area: title;
+  }
+  
+  .grid-container--tech > img {
+    grid-area: image;
+  }
+
+  .hero-images {
+    display: block;
+  }
+
+  .hero-images-wide {
+    display: none;
+  }
+  
+  .grid-container--tech > .number-indicators {
+    margin-block: 2rem 3rem;
+    display: flex;
+    flex-direction: column;
+    grid-area: controls;
+  }
+
+  .grid-container--tech > .tech-info {
+    grid-area: content;
+    align-self: start;
+  }
+
+  .tech-info > h2 {
+    align-self: start;
   }
 }
